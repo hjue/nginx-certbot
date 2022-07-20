@@ -7,7 +7,7 @@
 ## 安装
 
 1. [安装 docker-compose](https://docs.docker.com/compose/install/#install-compose)。
-2. 克隆此存储库：`git clone https://github.com/hjue/nginx-certbot.git .`
+2. 克隆此存储库：`git clone https://github.com/hjue/nginx-certbot.git `
 3. 修改配置：
 
 - 将域和电子邮件地址添加到 compose.yml
@@ -20,7 +20,7 @@ docker-compose up -d webserver
 4. 获取证书
 
 ```
-docker-compose up -d certbot
+docker-compose up certbot
 ```
 
 5. 修改samples/site.conf 中的域名，替换 nginx/conf/site.conf
