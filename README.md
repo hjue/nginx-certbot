@@ -14,13 +14,13 @@
 - 运行初始化脚本：
 
 ```
-docker-compose up -d webserver
+docker compose up -d webserver
 ```
 
 4. 获取证书
 
 ```
-docker-compose up certbot
+docker compose up certbot
 ```
 
 5. 修改samples/site.conf 中的域名，替换 nginx/conf/site.conf
@@ -34,7 +34,7 @@ cp samples/site.conf nginx/conf/site.conf
 5. 重启nginx 服务
 
 ```
- docker-compose restart
+ docker compose restart
 ```
 
 
@@ -46,6 +46,6 @@ cp samples/site.conf nginx/conf/site.conf
 
 
 ```
-0 5 1 * *  /usr/local/bin/docker-compose up -f /var/docker/compose.yml certbot
+0 5 1 * *  /usr/local/bin/docker compose up -f /var/docker/compose.yml certbot
 ```
 
